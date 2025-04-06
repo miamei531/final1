@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://elenul5y1llx"]
+
+[ext_resource type="Texture2D" uid="uid://bc5revxsp33rf" path="res://icon.svg" id="1_bklsw"]
+
+[node name="slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+offset_right = 24.0
+offset_bottom = 34.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 0.321569)
+texture_filter = 1
+scale = Vector2(0.1875, 0.265625)
+texture = ExtResource("1_bklsw")
+centered = false

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdodvyott0mbh"
+path="res://.godot/imported/StockTune-Joyful Nature Serenade_1726146161.mp3-0872b16cc055aebbf223033df5fc25f2.mp3str"
+
+[deps]
+
+source_file="res://soundeffect/StockTune-Joyful Nature Serenade_1726146161.mp3"
+dest_files=["res://.godot/imported/StockTune-Joyful Nature Serenade_1726146161.mp3-0872b16cc055aebbf223033df5fc25f2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bisvdmdvnu3kd"
+path="res://.godot/imported/StockTune-Whispers Of The Forest_1725969421.mp3-64e113626f0915cb6e34026ae39d0867.mp3str"
+
+[deps]
+
+source_file="res://đồ họa/note/StockTune-Whispers Of The Forest_1725969421.mp3"
+dest_files=["res://.godot/imported/StockTune-Whispers Of The Forest_1725969421.mp3-64e113626f0915cb6e34026ae39d0867.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

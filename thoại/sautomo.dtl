@@ -1,0 +1,8 @@
+if {tran} == 2:
+	Hiểu biết của cậu thật đáng kinh ngạc! Tôi sẽ cho phép cậu đi qua.
+else:
+	Sao ngươi lại vào đây? Muốn gặp tiên sao? Bà ấy không tiếp bắt cứ ai không chứng mình được bản thân đâu ! Nếu muốn qua ngươi phải trả lời được câu hỏi của ta !
+	join cá 1
+	cá: Cậu cần phải cẩn thận! Ngài sâu rất thiếu kiên nhẫn cậu phải trả lời câu hỏi TRONG THỜI GIAN GIỚI HẠN !
+	Ấn space để bắt đầu màn chơi
+	set {caythegioi} += 1

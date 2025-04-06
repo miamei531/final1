@@ -1,0 +1,204 @@
+[gd_scene load_steps=25 format=3 uid="uid://bgud13iyg4fcv"]
+
+[ext_resource type="Script" path="res://CharacterBody2.gd" id="1_0hdol"]
+[ext_resource type="Script" path="res://4 màn hình cơ bản/cayakquy.gd" id="1_ymrat"]
+[ext_resource type="Texture2D" uid="uid://d4byihr5gvrhd" path="res://đồ họa/cayakquy/Ắk wỷ_.png" id="3_uq26d"]
+[ext_resource type="Script" path="res://4 màn hình cơ bản/quả 2.gd" id="3_vmcd3"]
+[ext_resource type="Texture2D" uid="uid://bt8cwo7hkx0we" path="res://đồ họa/note/Quả 1.png" id="4_k28tk"]
+[ext_resource type="Script" path="res://4 màn hình cơ bản/quả 3.gd" id="4_u1b44"]
+[ext_resource type="Texture2D" uid="uid://dbrp5ru2yj3j6" path="res://đồ họa/cayakquy/Ắk wỷ mở mồm 💢.png" id="4_upbgb"]
+[ext_resource type="Script" path="res://4 màn hình cơ bản/quả 4.gd" id="5_av4at"]
+[ext_resource type="Texture2D" uid="uid://drwug75vlpbwa" path="res://đồ họa/note/Quả 2.png" id="5_e74eh"]
+[ext_resource type="Texture2D" uid="uid://b4akyuqrt35it" path="res://đồ họa/note/Quả 3.png" id="6_ok1at"]
+[ext_resource type="Texture2D" uid="uid://tb8ouppwg8xw" path="res://đồ họa/note/Quả 4.png" id="7_05lko"]
+[ext_resource type="Texture2D" uid="uid://vo8a7qx7i4f4" path="res://đồ họa/nền/Room cây ác quỷ.png" id="7_k4u4j"]
+[ext_resource type="PackedScene" uid="uid://dcxpga1ypqfe7" path="res://character/meo2.tscn" id="8_46gep"]
+[ext_resource type="Texture2D" uid="uid://do5pd1mcbdy45" path="res://đồ họa/note/Quả 5.png" id="8_vjh35"]
+[ext_resource type="PackedScene" uid="uid://c4vdaojxdhtwt" path="res://lặtvat/ui.tscn" id="9_ydeik"]
+[ext_resource type="PackedScene" uid="uid://c3v4hat3j8uq4" path="res://lặtvat/canvas_layer.tscn" id="11_u82g1"]
+[ext_resource type="AudioStream" uid="uid://bpcerken5rgk4" path="res://soundeffect/StockTune-Kart Race Mischief_1725968926.mp3" id="13_24qxc"]
+[ext_resource type="AudioStream" uid="uid://bn2co0eduajmq" path="res://soundeffect/game-over-39-199830.mp3" id="14_v6tji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvf0l"]
+size = Vector2(81, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4dno5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k28tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e74eh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ok1at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_05lko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vjh35")
+}],
+"loop": true,
+"name": &"quaroi",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idenq"]
+size = Vector2(1162, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk8lf"]
+size = Vector2(63, 658)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xq5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_uq26d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_upbgb")
+}],
+"loop": true,
+"name": &"akquybt",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8o8lx"]
+radius = 84.0536
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ymrat")
+
+[node name="quả 1" type="CharacterBody2D" parent="."]
+position = Vector2(417, 139)
+script = ExtResource("1_0hdol")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quả 1"]
+position = Vector2(-6, 15)
+shape = SubResource("RectangleShape2D_vvf0l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="quả 1"]
+position = Vector2(-4.00001, 26)
+scale = Vector2(0.196667, 0.190972)
+sprite_frames = SubResource("SpriteFrames_4dno5")
+animation = &"quaroi"
+frame = 4
+frame_progress = 0.751756
+
+[node name="quả 2" type="CharacterBody2D" parent="."]
+position = Vector2(600, 200)
+script = ExtResource("3_vmcd3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quả 2"]
+position = Vector2(-6, 15)
+shape = SubResource("RectangleShape2D_vvf0l")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="quả 2"]
+position = Vector2(-4.99999, 20.5)
+scale = Vector2(0.19, 0.164931)
+sprite_frames = SubResource("SpriteFrames_4dno5")
+animation = &"quaroi"
+frame = 4
+frame_progress = 0.751756
+
+[node name="quả 3" type="CharacterBody2D" parent="."]
+position = Vector2(800, 100)
+script = ExtResource("4_u1b44")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quả 3"]
+position = Vector2(-6, 15)
+shape = SubResource("RectangleShape2D_vvf0l")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="quả 3"]
+position = Vector2(-7.50003, 16)
+scale = Vector2(0.208333, 0.166667)
+sprite_frames = SubResource("SpriteFrames_4dno5")
+animation = &"quaroi"
+frame = 4
+frame_progress = 0.751756
+
+[node name="quả 4" type="CharacterBody2D" parent="."]
+position = Vector2(1000, 200)
+script = ExtResource("5_av4at")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quả 4"]
+position = Vector2(-6, 15)
+shape = SubResource("RectangleShape2D_vvf0l")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="quả 4"]
+position = Vector2(-8.00001, 19.5)
+scale = Vector2(0.2, 0.157986)
+sprite_frames = SubResource("SpriteFrames_4dno5")
+animation = &"quaroi"
+frame = 4
+frame_progress = 0.751756
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(577, 611)
+shape = SubResource("RectangleShape2D_idenq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-30.5, 319)
+shape = SubResource("RectangleShape2D_uk8lf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1179, 280)
+shape = SubResource("RectangleShape2D_uk8lf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -2
+position = Vector2(622, 324)
+scale = Vector2(3.2875, 2.21864)
+sprite_frames = SubResource("SpriteFrames_3xq5c")
+animation = &"akquybt"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="RoomCâyÁcQuỷ" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(574, 300)
+texture = ExtResource("7_k4u4j")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("8_46gep")]
+position = Vector2(317, 507)
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+position = Vector2(-205, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(204, 5)
+shape = SubResource("CircleShape2D_8o8lx")
+
+[node name="ui" parent="." instance=ExtResource("9_ydeik")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("11_u82g1")]
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_24qxc")
+bus = &"Music"
+
+[node name="cry" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_v6tji")
+bus = &"SFX"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 12.0
+offset_top = 51.0
+offset_right = 283.0
+offset_bottom = 103.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 7.0
+offset_right = 268.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 20
+text = "Nhấn [space] để nhặt quả"
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

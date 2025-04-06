@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://kugk3twpr3ge"]
+
+[ext_resource type="Texture2D" uid="uid://b2u8gr4ayom0f" path="res://đồ họa/batien/Hồ cá có cá.png" id="1_dp6bq"]
+[ext_resource type="Script" path="res://lặtvat/button.gd" id="2_dqbot"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ybvl"]
+texture = ExtResource("1_dp6bq")
+region_rect = Rect2(108, 124, 284, 200)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlf3f"]
+texture = ExtResource("1_dp6bq")
+region_rect = Rect2(108, 124, 284, 200)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e0aia"]
+texture = ExtResource("1_dp6bq")
+region_rect = Rect2(108, 124, 284, 200)
+
+[node name="Button" type="Button"]
+offset_left = -13.0
+offset_top = -8.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_7ybvl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nlf3f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e0aia")
+script = ExtResource("2_dqbot")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://qhoux10svfka"]
+
+[ext_resource type="Script" path="res://lặtvat/control.gd" id="1_8cwhq"]
+[ext_resource type="Texture2D" uid="uid://dij1a7watxjku" path="res://đồ họa/note/New Piskel.png" id="1_f2so5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8cwhq")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 653.0
+texture = ExtResource("1_f2so5")
+region_rect = Rect2(18.2778, 44.7801, 161.053, 99.9342)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 78.0
+offset_right = 1035.0
+offset_bottom = 534.0
+theme_override_font_sizes/font_size = 30
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 553.0
+offset_right = 178.0
+offset_bottom = 620.0
+text = "Back"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

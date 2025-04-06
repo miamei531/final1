@@ -1,0 +1,15 @@
+if {causaiak} == 12:
+	Ồ thật tuyệt vời làm sao! Ta tin chắc rằng cậu là một người đầy thông minh và kiên cường. Xứng đáng để ta trao Viên Đá thế giới! Đây.. giữ lấy và mong rằng ngươi sẽ dùng nó thật hiệu quả.
+	set {xong} = true
+	[end_timeline]
+set {nhan_do.nch} = true
+join cá 1
+cá: Thưa bà, cậu ấy cần "Viên đá thế giới" để cứu làng của mình, tên rồng hung ác đã lên cơn tức giận và bắt những cư dân của ngôi làng cậu ấy đi.
+leave cá
+join mèo 1
+Đúng vậy thưa bà.
+leave mèo
+Chà, chú mèo tội nghiệp.. Tuy nhiên "Viên đá thế giới" không thể tự tiện cho đi. Vậy liệu cậu có sẵn sàng để đón nhận thử thách cuối cùng của ta?
+mèo: Tất nhiên rồi thưa bà.
+set {btien} = true
+set {nhan_do.nch} = false

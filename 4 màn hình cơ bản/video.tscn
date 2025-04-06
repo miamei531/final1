@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://p7r7dsroj5ii"]
+
+[ext_resource type="Script" path="res://4 màn hình cơ bản/video.gd" id="1_000aj"]
+[ext_resource type="VideoStream" path="res://đồ họa/video.ogv" id="1_ihefl"]
+[ext_resource type="Texture2D" uid="uid://e4j0wc052idk" path="res://đồ họa/note/Không Có Tiêu Đề65_20240916081334.png" id="2_uo7nv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_000aj")
+
+[node name="KhôngCóTiêuĐề6520240916081334" type="Sprite2D" parent="."]
+position = Vector2(616, 346)
+texture = ExtResource("2_uo7nv")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_right = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_ihefl")
+autoplay = true
+expand = true
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 434.0
+offset_top = 276.0
+offset_right = 726.0
+offset_bottom = 388.0
+theme_override_font_sizes/font_size = 50
+text = "BACK "
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

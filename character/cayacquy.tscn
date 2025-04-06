@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvad4xi1u72q5"]
+
+[ext_resource type="Script" path="res://character/cayte.gd" id="1_2yvuh"]
+[ext_resource type="Texture2D" uid="uid://d4byihr5gvrhd" path="res://đồ họa/cayakquy/Ắk wỷ_.png" id="1_gwoby"]
+[ext_resource type="Texture2D" uid="uid://dbrp5ru2yj3j6" path="res://đồ họa/cayakquy/Ắk wỷ mở mồm 💢.png" id="2_ru8cm"]
+[ext_resource type="Texture2D" uid="uid://c5lexvguhidtp" path="res://đồ họa/nền/Cây ắk wỷ há mồm ít hơn.png" id="3_38mwm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8a86"]
+size = Vector2(287, 470)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eehad"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gwoby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_38mwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ru8cm")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_2yvuh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-41.5, 225)
+shape = SubResource("RectangleShape2D_m8a86")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-20.5, 266.5)
+scale = Vector2(3.80417, 2.70609)
+sprite_frames = SubResource("SpriteFrames_eehad")
+animation = &"normal"
+frame_progress = 0.223387

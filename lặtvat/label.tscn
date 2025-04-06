@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8viwp5binxmd"]
+
+[ext_resource type="Script" path="res://Label.gd" id="1_uwdin"]
+
+[node name="Label" type="Label"]
+offset_left = 130.0
+offset_top = 120.0
+offset_right = 170.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 30
+script = ExtResource("1_uwdin")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5sdr34bvr8if"]
+
+[ext_resource type="PackedScene" uid="uid://ccmuk2fs3sbvd" path="res://4 màn hình cơ bản/setting.tscn" id="1_amgi1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ui" parent="." instance=ExtResource("1_amgi1")]

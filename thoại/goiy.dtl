@@ -1,0 +1,5 @@
+join cá 1
+set {huongdan} = 1
+cậu có thể ấn vào màn hình góc trên cùng bên trái để lấy thêm gợi ý\:>
+[wait time="1.0"]
+set {huongdan} += 1

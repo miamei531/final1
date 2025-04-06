@@ -1,0 +1,12 @@
+join mèo 1
+mèo: cùng nhau đi thôi
+leave mèo
+join cá 1
+cá: cảm ơn cậu
+leave cá
+join mèo 1
+mèo: chúng ta sẽ đi đâu đây, mình thật sự chưa ra khỏi làng bao giờ
+leave mèo
+join cá 1
+cá: cậu tiếp tục đi hết con đường kia và rẽ trái đi cậu sẽ đến nơi của cây thế giới , thế giới ngoài kia rộng và đẹp lắm không nên bỏ lỡ đâu
+set {nhan_do.đi_thoi} = true

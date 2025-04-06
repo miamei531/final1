@@ -1,0 +1,5 @@
+join cá 1
+cá: Cậu vừa được 10 thẻ gacha và 1 tờ giấy hướng dẫn\:\
+- Để dùng thẻ gacha cậu có thể quay lại màn hình chính vào rương để sử dụng. \
+- Tờ giấy hướng dẫn sẽ ghi nội dung bài mà cậu sắp đối mặt ,để coi cậu có thể ấn vào tớ ở góc trên cùng bên trái.
+set {chuonghoc} += 1

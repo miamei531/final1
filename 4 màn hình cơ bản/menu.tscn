@@ -1,0 +1,178 @@
+[gd_scene load_steps=30 format=3 uid="uid://65jbjacqlnrg"]
+
+[ext_resource type="Script" path="res://4 màn hình cơ bản/menu.gd" id="1_03w23"]
+[ext_resource type="Texture2D" uid="uid://dkq346no6rvx0" path="res://đồ họa/mèo/mèo/Cat original.png" id="2_j2i3a"]
+[ext_resource type="Texture2D" uid="uid://ndefpb4w0lmk" path="res://đồ họa/nút.png" id="2_sfv8k"]
+[ext_resource type="Texture2D" uid="uid://blhhag0sg8qkt" path="res://đồ họa/note/Gacha time.png" id="3_cm8c0"]
+[ext_resource type="Texture2D" uid="uid://bq6hxiibpfjoh" path="res://đồ họa/note/Start button.png" id="3_qsh86"]
+[ext_resource type="Texture2D" uid="uid://d3w3tpdi8ldcs" path="res://đồ họa/note/Appearance.png" id="4_0yaej"]
+[ext_resource type="Texture2D" uid="uid://doeagbwgt7bgt" path="res://đồ họa/nền/Main menu .png" id="4_hyvif"]
+[ext_resource type="Texture2D" uid="uid://362cwseyl34" path="res://đồ họa/note/Gacha time (open).png" id="5_4n5cq"]
+[ext_resource type="Texture2D" uid="uid://dcgcmrmi57k4n" path="res://đồ họa/note/Setting.png" id="6_3625y"]
+[ext_resource type="Texture2D" uid="uid://sv85ejksrh62" path="res://đồ họa/note/Practice mode.png" id="7_cywjp"]
+[ext_resource type="AudioStream" uid="uid://cdodvyott0mbh" path="res://soundeffect/StockTune-Joyful Nature Serenade_1726146161.mp3" id="11_nwknl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2jwif"]
+texture = ExtResource("3_qsh86")
+region_rect = Rect2(83.02, 98.75, 416.98, 308.55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5hh5c"]
+texture = ExtResource("3_qsh86")
+region_rect = Rect2(83.02, 98.75, 416.98, 308.55)
+modulate_color = Color(0.196078, 0.203922, 0.619608, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hnwkw"]
+texture = ExtResource("3_qsh86")
+region_rect = Rect2(83.02, 98.75, 416.98, 308.55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3lsf4"]
+texture = ExtResource("3_cm8c0")
+region_rect = Rect2(127, 30, 223, 228)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4rs6j"]
+texture = ExtResource("5_4n5cq")
+region_rect = Rect2(127, 30, 223, 228)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsbl5"]
+texture = ExtResource("3_cm8c0")
+region_rect = Rect2(127, 30, 223, 228)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opqcl"]
+texture = ExtResource("4_0yaej")
+region_rect = Rect2(170.14, 0.85, 148.83, 278.3)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t875c"]
+texture = ExtResource("4_0yaej")
+region_rect = Rect2(170.14, 0.85, 148.83, 278.3)
+modulate_color = Color(0.254902, 0.278431, 0.941176, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k8fdf"]
+texture = ExtResource("4_0yaej")
+region_rect = Rect2(170.14, 0.85, 148.83, 278.3)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10ncn"]
+texture = ExtResource("6_3625y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0o5c"]
+texture = ExtResource("6_3625y")
+modulate_color = Color(0.176471, 0.211765, 0.85098, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5e3tt"]
+texture = ExtResource("6_3625y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3f0m"]
+texture = ExtResource("7_cywjp")
+region_rect = Rect2(74.55, 109.64, 358.16, 249.26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1j0q3"]
+texture = ExtResource("7_cywjp")
+region_rect = Rect2(74.55, 109.64, 358.16, 249.26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5lvo"]
+texture = ExtResource("7_cywjp")
+region_rect = Rect2(74.55, 109.64, 358.16, 249.26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t2xao"]
+texture = ExtResource("2_sfv8k")
+region_rect = Rect2(42.27, 131.81, 94.38, 90.75)
+modulate_color = Color(0, 0.415686, 1, 0.988235)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_06umw"]
+texture = ExtResource("2_sfv8k")
+region_rect = Rect2(42.27, 131.81, 94.38, 90.75)
+modulate_color = Color(0, 0.415686, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hyk61"]
+texture = ExtResource("2_sfv8k")
+region_rect = Rect2(42.27, 131.81, 94.38, 90.75)
+modulate_color = Color(0, 0.415686, 1, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_03w23")
+
+[node name="con mèo" type="Sprite2D" parent="."]
+position = Vector2(577.875, 340)
+scale = Vector2(0.342241, 0.33046)
+texture = ExtResource("2_j2i3a")
+
+[node name="start" type="Button" parent="."]
+offset_left = 893.0
+offset_top = 300.0
+offset_right = 1066.0
+offset_bottom = 430.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_2jwif")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5hh5c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hnwkw")
+
+[node name="Label" type="Label" parent="start"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 115.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 30
+text = "START"
+
+[node name="rương" type="Button" parent="."]
+offset_left = 195.0
+offset_top = 319.0
+offset_right = 373.0
+offset_bottom = 483.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_3lsf4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4rs6j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dsbl5")
+
+[node name="gương" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 199.0
+offset_right = 191.0
+offset_bottom = 604.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_opqcl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_t875c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k8fdf")
+
+[node name="setting" type="Button" parent="."]
+offset_left = 1023.0
+offset_top = 30.0
+offset_right = 1130.0
+offset_bottom = 127.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_10ncn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v0o5c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5e3tt")
+
+[node name="ôn tập" type="Button" parent="."]
+offset_left = 308.0
+offset_top = 63.0
+offset_right = 471.0
+offset_bottom = 192.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_k3f0m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1j0q3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m5lvo")
+
+[node name="tắt" type="Button" parent="."]
+offset_left = 29.0
+offset_top = 30.0
+offset_right = 118.0
+offset_bottom = 121.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_t2xao")
+theme_override_styles/hover = SubResource("StyleBoxTexture_06umw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hyk61")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(574, 323)
+texture = ExtResource("4_hyvif")
+
+[node name="menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_nwknl")
+bus = &"Music"
+
+[connection signal="button_down" from="start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="rương" to="." method="_on_rương_button_down"]
+[connection signal="button_down" from="gương" to="." method="_on_gương_button_down"]
+[connection signal="button_down" from="setting" to="." method="_on_setting_button_down"]
+[connection signal="button_down" from="ôn tập" to="." method="_on_ôn_tập_button_down"]
+[connection signal="button_down" from="tắt" to="." method="_on_tắt_button_down"]

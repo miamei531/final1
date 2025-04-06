@@ -1,0 +1,14 @@
+join cải 1
+cải: hừ hừ.. Những người bạn của ta nói ta không thể nào ra được những câu hỏi khó. Ngươi phải thách đấu với ta để cho họ thấy.
+leave cải
+if {nhan_do.đi_thoi} == true:
+	join cá 1
+	cá: À ông cải ,ông ta kì lạ lắm cậu phải trả lời những câu hỏi của ông ấy nếu muốn đi qua, tớ sẽ chỉ cậu cách vượt qua các thử thách.
+	leave cá
+	join mèo 1
+	mèo: oke
+	set {nhan_do.angrycab} = true
+else:
+	join mèo 1
+	mèo: ???????? Có vẻ mình không thể đi qua con đường này.
+	set 

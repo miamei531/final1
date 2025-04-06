@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccmuk2fs3sbvd"]
+
+[ext_resource type="Script" path="res://lặtvat/ui.gd" id="1_jh7a1"]
+[ext_resource type="Script" path="res://4 màn hình cơ bản/audiomenu.gd" id="2_mluj6"]
+[ext_resource type="AudioStream" uid="uid://cdodvyott0mbh" path="res://soundeffect/StockTune-Joyful Nature Serenade_1726146161.mp3" id="3_ceeix"]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_jh7a1")
+
+[node name="menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_mluj6")
+
+[node name="ColorRect" type="ColorRect" parent="menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 256
+theme_override_constants/margin_right = 256
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 17
+columns = 2
+
+[node name="musiclable" type="Label" parent="menu/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Nhạc:"
+
+[node name="musicSlider" type="HSlider" parent="menu/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="musiclable2" type="Label" parent="menu/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "SFX:"
+
+[node name="SFXslider" type="HSlider" parent="menu/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="menu"]
+layout_mode = 2
+offset_left = 256.0
+offset_top = 366.0
+offset_right = 335.0
+offset_bottom = 389.0
+text = "Thông báo:"
+
+[node name="CheckButton" type="CheckButton" parent="menu/Label"]
+layout_mode = 2
+offset_left = -8.0
+offset_top = -12.0
+offset_right = 322.0
+offset_bottom = 12.0
+scale = Vector2(2, 2)
+
+[node name="thoát" type="Button" parent="menu"]
+layout_mode = 0
+offset_left = 876.0
+offset_top = 429.0
+offset_right = 976.0
+offset_bottom = 485.0
+text = "OK"
+
+[node name="Label2" type="Label" parent="menu"]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 148.0
+offset_right = 735.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ceeix")
+bus = &"Music"
+
+[connection signal="mouse_exited" from="menu/MarginContainer/VBoxContainer/GridContainer/musicSlider" to="menu" method="_on_music_slider_mouse_exited"]
+[connection signal="value_changed" from="menu/MarginContainer/VBoxContainer/GridContainer/musicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="mouse_exited" from="menu/MarginContainer/VBoxContainer/GridContainer/SFXslider" to="menu" method="_on_music_slider_2_mouse_exited"]
+[connection signal="value_changed" from="menu/MarginContainer/VBoxContainer/GridContainer/SFXslider" to="." method="_on_music_slider_2_value_changed"]
+[connection signal="button_down" from="menu/thoát" to="." method="_on_thoát_button_down"]

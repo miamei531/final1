@@ -1,0 +1,29 @@
+set {huongdan} = 10
+Khúc sông dài 173,2m .
+set {huongdan} = 11
+Khoảng cách từ BẠN đến CỎ bằng khoảng cách từ cỏ đến HOA SEN.
+* Tính quãng đường đến VIÊN ĐÁ. Biết\:\
+Thời gian đi từ CỎ đến VIÊN ĐÁ gấp đôi từ HOA SEN đến VIÊN ĐÁ.\
+(Giả sử rằng vận tốc đi bộ của bạn không thay đổi và di chuyển thẳng đều. Kết quả làm tròn đến hàng đơn vị).
+[text_input var="input"]
+if {input} == "445m":
+	Qua câu trả lời chính xác!
+	set {causaiak} = 9
+elif {input} == "445m":
+	Qua câu trả lời chính xác!
+	set {causaiak} = 9
+elif {} == "445 m":
+	Qua câu trả lời chính xác!
+	set {causaiak} = 9
+elif {input} == "445":
+	BẠN CÓ QUÊN GÌ KHÔNG TA?
+	set {causaiak} = 10
+elif {input} == "445":
+	BẠN CÓ QUÊN GÌ KHÔNG TA?
+	set {causaiak} = 10
+elif {input} == "445 m":
+	Qua câu trả lời chính xác!
+	set {causaiak} = 9
+else:
+	Ôi không bạn trả lời sai rồi! phải thử lại thôi !
+	set {causaiak} = 10

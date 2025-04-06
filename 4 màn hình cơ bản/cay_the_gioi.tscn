@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://betsvql2gvp0o"]
+
+[ext_resource type="Script" path="res://4 màn hình cơ bản/cay_the_gioi.gd" id="1_tk2ah"]
+[ext_resource type="PackedScene" uid="uid://dcxpga1ypqfe7" path="res://character/meo2.tscn" id="2_i8amj"]
+[ext_resource type="Texture2D" uid="uid://b2u8gr4ayom0f" path="res://đồ họa/batien/Hồ cá có cá.png" id="4_d218q"]
+[ext_resource type="Texture2D" uid="uid://rmu46rxfnrxf" path="res://đồ họa/note/Cây thế giới.png" id="4_vrb0f"]
+[ext_resource type="AudioStream" uid="uid://8em4007liwo2" path="res://soundeffect/StockTune-Empowerment Echoes In Nature_1725968198.mp3" id="5_1pahy"]
+[ext_resource type="Texture2D" uid="uid://b4ytpcn502fq4" path="res://đồ họa/note/Background cây tg.png" id="6_p6qhi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hc4o"]
+size = Vector2(1148, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkatr"]
+size = Vector2(472, 644)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytbxh"]
+size = Vector2(77, 635)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_60pj2"]
+texture = ExtResource("4_d218q")
+region_rect = Rect2(102, 117, 288, 211)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhy5q"]
+texture = ExtResource("4_d218q")
+region_rect = Rect2(102, 117, 288, 211)
+modulate_color = Color(0.368627, 0.188235, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0jvfh"]
+radius = 21.1104
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tk2ah")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 2.0
+offset_top = 566.0
+offset_right = 1156.0
+offset_bottom = 650.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_i8amj")]
+position = Vector2(74, 500)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(390, 604)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(193, 1)
+shape = SubResource("RectangleShape2D_2hc4o")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(537, -279)
+shape = SubResource("RectangleShape2D_jkatr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-423.5, -281.5)
+shape = SubResource("RectangleShape2D_ytbxh")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 29.0
+offset_right = 164.0
+offset_bottom = 122.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_60pj2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uhy5q")
+metadata/_edit_use_anchors_ = true
+
+[node name="CâyThếGiới" type="Sprite2D" parent="."]
+position = Vector2(919, -37.5)
+scale = Vector2(1.31685, 1.32219)
+texture = ExtResource("4_vrb0f")
+
+[node name="vaocay" type="Area2D" parent="CâyThếGiới"]
+position = Vector2(-50, 255)
+scale = Vector2(4.14063, 5.07813)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CâyThếGiới/vaocay"]
+position = Vector2(-39.8263, 29.2427)
+shape = SubResource("CircleShape2D_0jvfh")
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1pahy")
+bus = &"Music"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="BackgroundCâyTg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(580, 290)
+texture = ExtResource("6_p6qhi")
+
+[connection signal="body_entered" from="CâyThếGiới/vaocay" to="." method="_on_vaocay_body_entered"]

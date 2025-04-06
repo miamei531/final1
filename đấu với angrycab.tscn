@@ -1,0 +1,157 @@
+[gd_scene load_steps=21 format=3 uid="uid://ipiu4emiru2s"]
+
+[ext_resource type="Script" path="res://đấu với angrycab.gd" id="1_nfx42"]
+[ext_resource type="Texture2D" uid="uid://bn4l57iimk02c" path="res://đồ họa/mèo/mèo/Cat lose.png" id="2_dwprm"]
+[ext_resource type="PackedScene" uid="uid://c4vdaojxdhtwt" path="res://lặtvat/ui.tscn" id="2_yt1wv"]
+[ext_resource type="Texture2D" uid="uid://ovrmu38c7bu2" path="res://đồ họa/mèo/mèo/Cat lose (dead).png" id="3_0dwst"]
+[ext_resource type="Texture2D" uid="uid://urly6eutt6mx" path="res://đồ họa/mèo/Qua phải- chéo phải/Cat right 1.png" id="4_33xcf"]
+[ext_resource type="Texture2D" uid="uid://c6n37jj3jrt2m" path="res://đồ họa/mèo/mèo/Cat lose_20240712082849.png" id="4_qkhqt"]
+[ext_resource type="Texture2D" uid="uid://cseu6vuf73g88" path="res://đồ họa/mèo/mèo thở/Cat right 1 (t).png" id="5_a4bpr"]
+[ext_resource type="Texture2D" uid="uid://b2u8gr4ayom0f" path="res://đồ họa/batien/Hồ cá có cá.png" id="8_n0il3"]
+[ext_resource type="PackedScene" uid="uid://c3v4hat3j8uq4" path="res://lặtvat/canvas_layer.tscn" id="9_6tt82"]
+[ext_resource type="PackedScene" uid="uid://qhoux10svfka" path="res://lặtvat/control.tscn" id="10_dlod3"]
+[ext_resource type="Texture2D" uid="uid://b5ufh0vtgea8o" path="res://đồ họa/angrycab/Angry Cab 1,7.png" id="10_nvebl"]
+[ext_resource type="Texture2D" uid="uid://mlnoj5xc5cog" path="res://đồ họa/angrycab/Angry Cab 2,6.png" id="11_wkwp4"]
+[ext_resource type="PackedScene" uid="uid://b8viwp5binxmd" path="res://lặtvat/label.tscn" id="12_1eqeq"]
+[ext_resource type="Texture2D" uid="uid://t3247gdnbyln" path="res://đồ họa/nền/CAB BATTLE ⚔️ .png" id="13_21d86"]
+[ext_resource type="AudioStream" uid="uid://bpcerken5rgk4" path="res://soundeffect/StockTune-Kart Race Mischief_1725968926.mp3" id="15_8o3kl"]
+[ext_resource type="AudioStream" uid="uid://8o6rpq1kevqm" path="res://soundeffect/game-over-arcade-6435.mp3" id="16_ihyet"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0tr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dwprm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qkhqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dwprm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qkhqt")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0dwst")
+}],
+"loop": true,
+"name": &"lose",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_33xcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a4bpr")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fp703"]
+animations = [{
+"frames": [{
+"duration": 1.2,
+"texture": ExtResource("10_nvebl")
+}, {
+"duration": 1.2,
+"texture": ExtResource("11_wkwp4")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4vtn"]
+texture = ExtResource("8_n0il3")
+region_rect = Rect2(102, 117, 288, 211)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqga3"]
+texture = ExtResource("8_n0il3")
+region_rect = Rect2(102, 117, 288, 211)
+modulate_color = Color(0.368627, 0.188235, 1, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_nfx42")
+
+[node name="ui" parent="." instance=ExtResource("2_yt1wv")]
+
+[node name="con mèo" type="AnimatedSprite2D" parent="."]
+position = Vector2(241, 297)
+scale = Vector2(0.241954, 0.24023)
+sprite_frames = SubResource("SpriteFrames_t0tr7")
+animation = &"dead"
+frame = 2
+frame_progress = 0.890932
+
+[node name="CanvasLayer" parent="." instance=ExtResource("9_6tt82")]
+
+[node name="Control2" parent="CanvasLayer" instance=ExtResource("10_dlod3")]
+visible = false
+
+[node name="Label" parent="CanvasLayer" instance=ExtResource("12_1eqeq")]
+offset_left = 1053.0
+offset_top = 591.0
+offset_right = 1140.0
+offset_bottom = 635.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel3" type="Panel" parent="CanvasLayer"]
+offset_left = -6.0
+offset_top = 581.0
+offset_right = 1150.0
+offset_bottom = 646.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 393.0
+offset_top = 285.0
+offset_right = 786.0
+offset_bottom = 343.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Nhấn [space] để bắt đầu !"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(925, 293)
+scale = Vector2(0.472, 0.464)
+sprite_frames = SubResource("SpriteFrames_fp703")
+animation = &"normal"
+frame_progress = 0.568846
+
+[node name="Button" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 29.0
+offset_right = 164.0
+offset_bottom = 122.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_a4vtn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lqga3")
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="CabBattle⚔️" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 352)
+texture = ExtResource("13_21d86")
+
+[node name="argaudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_8o3kl")
+volume_db = -8.104
+bus = &"Music"
+
+[node name="sai" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_ihyet")
+bus = &"SFX"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

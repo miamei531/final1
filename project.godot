@@ -1,0 +1,128 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="game"
+run/main_scene="res://4 màn hình cơ bản/node_2d.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+
+[dialogic]
+
+directories/dch_directory={
+"Thiên Quỳnh": "res://character/Thiên Quỳnh.dch",
+"cá": "res://character/cá.dch",
+"cải": "res://character/cải.dch",
+"mèo": "res://mèo.dch"
+}
+directories/dtl_directory={
+"angrycab": "res://thoại/angrycab.dtl",
+"bangrycab": "res://bangrycab.dtl",
+"batien": "res://thoại/batien.dtl",
+"bttt": "res://thoại/bttt.dtl",
+"cauhoibt": "res://thoại/cauhoibt.dtl",
+"cayacquy": "res://thoại/cayacquy.dtl",
+"chào": "res://đồ họa/dialog/chào.dtl",
+"cái gì đây": "res://thoại/cái gì đây.dtl",
+"dcam": "res://dcam.dtl",
+"dicaytg": "res://thoại/dicaytg.dtl",
+"goiy": "res://thoại/goiy.dtl",
+"gợi ý ": "res://thoại/gợi ý .dtl",
+"jztr": "res://thoại/jztr.dtl",
+"kim": "res://thoại/kim.dtl",
+"lr": "res://thoại/lr.dtl",
+"mới": "res://thoại/mới.dtl",
+"qua1": "res://qua1.dtl",
+"rương đồ ": "res://thoại/rương đồ .dtl",
+"sautomo": "res://thoại/sautomo.dtl",
+"đưa cá đi": "res://thoại/đưa cá đi.dtl"
+}
+glossary/default_case_sensitive=true
+layout/style_list=[]
+layout/default_style=""
+variables={
+"btien": false,
+"cauhoicayakquy": 0,
+"causaiak": 0,
+"cayacquy": false,
+"cayak": 0,
+"caythegioi": 0,
+"chuonghoc": 0,
+"cuoi": 0,
+"het": false,
+"huongdan": 0,
+"inarea": false,
+"input": 0,
+"ls": false,
+"matca": 0,
+"nhan_do": {
+"angrycab": false,
+"ans": 0,
+"co_be_ca": false,
+"nch": false,
+"vitri": 0,
+"đi_thoi": false
+},
+"socauhoi": 0,
+"tongcauhoi": 0,
+"tran": 0,
+"xong": false
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+animations/cross_fade_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+animations/leave_default="res://addons/dialogic/Modules/Character/DefaultAnimations/fade_up_in_out.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[input]
+
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://thoại/thoại với cá.dialogue")
+
+[layer_names]
+
+2d_physics/layer_5="Actionable"
+
+[rendering]
+
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+anti_aliasing/quality/msaa_3d=1

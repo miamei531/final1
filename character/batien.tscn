@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://04nmltfeqwgm"]
+
+[ext_resource type="Script" path="res://character/batien.gd" id="1_7ij7r"]
+[ext_resource type="Texture2D" uid="uid://cnrbtb2sybs6s" path="res://đồ họa/batien/IMG_8897.PNG" id="1_rrxg8"]
+[ext_resource type="Texture2D" uid="uid://oxbqgslqmr0s" path="res://đồ họa/batien/Không Có Tiêu Đề1214_20240904232918.png" id="2_eskn6"]
+[ext_resource type="Texture2D" uid="uid://cxqamjnfnr08t" path="res://đồ họa/batien/Không Có Tiêu Đề1214_20240904233928.png" id="3_83d30"]
+[ext_resource type="AudioStream" uid="uid://8em4007liwo2" path="res://soundeffect/StockTune-Empowerment Echoes In Nature_1725968198.mp3" id="5_lgj3y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nrjpu"]
+radius = 63.0
+height = 216.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtgmj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rrxg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eskn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_83d30")
+}],
+"loop": true,
+"name": &"batien",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xwpgf"]
+radius = 189.187
+height = 482.625
+
+[node name="batien" type="CharacterBody2D"]
+script = ExtResource("1_7ij7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -144)
+shape = SubResource("CapsuleShape2D_nrjpu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(52, -110)
+scale = Vector2(0.946154, 0.820513)
+sprite_frames = SubResource("SpriteFrames_gtgmj")
+animation = &"batien"
+frame = 2
+frame_progress = 0.53691
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(27, -121)
+scale = Vector2(0.946154, 0.820513)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-23.252, -75.5625)
+shape = SubResource("CapsuleShape2D_xwpgf")
+
+[node name="nhacbatien" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_lgj3y")
+bus = &"Music"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

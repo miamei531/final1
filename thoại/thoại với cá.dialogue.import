@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://coj2c73d81xta"
+path="res://.godot/imported/thoại với cá.dialogue-ffdd6f5e70331fef5af6fb452051b646.tres"
+
+[deps]
+
+source_file="res://thoại/thoại với cá.dialogue"
+dest_files=["res://.godot/imported/thoại với cá.dialogue-ffdd6f5e70331fef5af6fb452051b646.tres"]
+
+[params]
+
+defaults=true

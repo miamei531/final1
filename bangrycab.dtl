@@ -1,0 +1,29 @@
+set {tongcauhoi} = 2
+set {huongdan} = 2
+join cải 1
+cải: bắt đầu ...
+cải: Câu 1\:\
+1+1 =?
+- 2
+- 2
+- 2
+set {socauhoi} += 1
+đúng rồi
+join  1
+leave cải
+Nếu cậu chọn đáp án đúng sẽ qua câu tiếp theo và không bị gì.
+set {huongdan} += 1
+Cậu có thể xem tổng số câu hỏi ở góc cùng bên phải
+set {huongdan} += 1
+[wait time="1.0"]
+Câu 2\: \
+2+2 = ?
+- 3
+- 5
+- 7
+set {socauhoi} += 1
+cải: Sai rồi!
+set {nhan_do.ans} += 1
+Nếu cậu chọn sai cậu sẽ bị mất 1 cá . Mất 3 cá cậu sẽ thua màn chơi và phải chơi lại.
+cải: Hừ Hừ \:<< Ta không ngờ ngươi lại có thể trả lời được, ĐỢI ĐÓ TA SẼ TRẢ THÙ!
+set {het} = true

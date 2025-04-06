@@ -1,0 +1,12 @@
+Bạn mèo ơi, bạn có việc gì mà ngồi ở đây vậy?
+join mèo 1
+mèo (bình thường): Cái gì vậy!? Một con cá vàng!?
+leave mèo
+Ta đây không phải là một con cá vàng bình thường, linh lực của ta dù đã cạn kiệt, nhưng ta vẫn có thể giúp đỡ ngươi khôi phục lại năng lực.
+join mèo 1
+mèo (bình thường): Cậu có lẽ cũng đã chứng kiến thấy được một con rồng bay qua đây đúng không? Chính tên đó đã phá hủy ngôi làng của tôi! Tôi quyết định sẽ trả thù!
+leave mèo
+Trùng hợp thay, chính hắn cũng là kẻ nắm giữ trong tay viên Hồng Thạch truyền thuyết… Ta với ngươi cùng chung một số mệnh phải tiêu diệt Rồng Bạo Chúa. Hãy mang ta theo dọc đường, ta sẽ giúp người trả thù, và ngươi giúp ta lấy được viên ngọc.
+mèo: Vậy thì tốt qua
+Bạn hãy lấy cho mình một cái bể cá và mình sẽ đi với bạn
+set {nhan_do.co_be_ca} = true

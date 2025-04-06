@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://dgq84fvrbeir"]
+
+[ext_resource type="Script" path="res://sautomo.gd" id="1_l0irg"]
+[ext_resource type="Texture2D" uid="uid://m2od0vcjmorp" path="res://đồ họa/angry cata/Angry Cata 0.png" id="2_rl1nn"]
+[ext_resource type="Texture2D" uid="uid://dhkd58bplgp3p" path="res://đồ họa/angry cata/Cata 1.png" id="2_wk2rq"]
+[ext_resource type="Texture2D" uid="uid://ci7hdy23orasr" path="res://đồ họa/angry cata/Angry cata 1.png" id="3_08fm8"]
+[ext_resource type="Texture2D" uid="uid://cbtpk0w2yh075" path="res://đồ họa/angry cata/Cata 2.png" id="3_8rlof"]
+[ext_resource type="Texture2D" uid="uid://cmm5bfuku2anr" path="res://đồ họa/angry cata/Cata 3.png" id="4_fkd7i"]
+[ext_resource type="Texture2D" uid="uid://cfmbqynqx2hec" path="res://đồ họa/angry cata/Angry cata 4.png" id="4_l2v21"]
+[ext_resource type="Texture2D" uid="uid://byqku8iq0v1jq" path="res://đồ họa/angry cata/Angry cata 5.png" id="5_4h4bx"]
+[ext_resource type="Texture2D" uid="uid://g2tnnp3eckdv" path="res://đồ họa/angry cata/Cata 4.png" id="5_qxvky"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epvvc"]
+radius = 148.0
+height = 492.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jechk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rl1nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_08fm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l2v21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4h4bx")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wk2rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8rlof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fkd7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qxvky")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 3.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_l0irg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_epvvc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, 32)
+scale = Vector2(0.572414, 0.552874)
+sprite_frames = SubResource("SpriteFrames_jechk")
+animation = &"angry"
+frame = 1
+frame_progress = 0.102857

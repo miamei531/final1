@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4vdaojxdhtwt"]
+
+[ext_resource type="Script" path="res://lặtvat/ca.gd" id="1_8s0n6"]
+[ext_resource type="Texture2D" uid="uid://ba20yqucd7jc2" path="res://đồ họa/note/Cá.png" id="2_e7710"]
+[ext_resource type="Texture2D" uid="uid://djn7v6lrjf3qe" path="res://đồ họa/note/Cá (mất).png" id="3_myr1x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ophf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e7710")
+}],
+"loop": true,
+"name": &"cá",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_myr1x")
+}],
+"loop": true,
+"name": &"cá đen",
+"speed": 5.0
+}]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_8s0n6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(826, 58)
+scale = Vector2(0.317, 0.3)
+sprite_frames = SubResource("SpriteFrames_3ophf")
+animation = &"cá"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(925, 57)
+scale = Vector2(0.317, 0.3)
+sprite_frames = SubResource("SpriteFrames_3ophf")
+animation = &"cá"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(1027, 59)
+scale = Vector2(0.317, 0.3)
+sprite_frames = SubResource("SpriteFrames_3ophf")
+animation = &"cá"

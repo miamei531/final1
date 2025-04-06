@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpcerken5rgk4"
+path="res://.godot/imported/StockTune-Kart Race Mischief_1725968926.mp3-f990413e8c320c10985b5892402d74e4.mp3str"
+
+[deps]
+
+source_file="res://soundeffect/StockTune-Kart Race Mischief_1725968926.mp3"
+dest_files=["res://.godot/imported/StockTune-Kart Race Mischief_1725968926.mp3-f990413e8c320c10985b5892402d74e4.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

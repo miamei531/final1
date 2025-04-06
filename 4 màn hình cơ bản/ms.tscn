@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt6jqwhgncxfb"]
+
+[ext_resource type="Script" path="res://4 màn hình cơ bản/ms.gd" id="1_iq1ut"]
+[ext_resource type="VideoStream" path="res://soundeffect/Để-tui-đi-ngủ-đi.ogv" id="2_lmerd"]
+[ext_resource type="AudioStream" uid="uid://bpqm5ivk4nrpn" path="res://đồ họa/StockTune-Bright Steps Ahead_1726907674.mp3" id="3_ruisu"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_iq1ut")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+offset_top = 3.0
+offset_right = 1155.0
+offset_bottom = 726.0
+stream = ExtResource("2_lmerd")
+autoplay = true
+expand = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ruisu")
+volume_db = -14.857
+autoplay = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

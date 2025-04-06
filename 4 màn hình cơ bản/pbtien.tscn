@@ -1,0 +1,731 @@
+[gd_scene load_steps=37 format=3 uid="uid://bai3fyvi6lxai"]
+
+[ext_resource type="Script" path="res://4 màn hình cơ bản/pbtien.gd" id="1_pugub"]
+[ext_resource type="Texture2D" uid="uid://gaga5j24nkp1" path="res://đồ họa/mèo/mèo/Cat left back 1.png" id="2_38dx1"]
+[ext_resource type="Texture2D" uid="uid://bn4l57iimk02c" path="res://đồ họa/mèo/mèo/Cat lose.png" id="2_cmw1i"]
+[ext_resource type="Texture2D" uid="uid://ovrmu38c7bu2" path="res://đồ họa/mèo/mèo/Cat lose (dead).png" id="3_81asv"]
+[ext_resource type="Texture2D" uid="uid://cw8miptm02j71" path="res://đồ họa/mèo/mèo/Cat left back 2.png" id="3_uxiln"]
+[ext_resource type="Texture2D" uid="uid://c1inwmbjsacbn" path="res://đồ họa/mèo/mèo/Cat back orgi .png" id="4_gs8nv"]
+[ext_resource type="Texture2D" uid="uid://bq0i3rxicp6bo" path="res://đồ họa/mèo/mèo/Cat right back 1.png" id="5_uy32h"]
+[ext_resource type="Texture2D" uid="uid://oil70enwlbxl" path="res://đồ họa/mèo/mèo/Mèo đứng trên lá 1.png" id="8_hohv0"]
+[ext_resource type="Texture2D" uid="uid://dkq346no6rvx0" path="res://đồ họa/mèo/mèo/Cat original.png" id="9_c7qbk"]
+[ext_resource type="Texture2D" uid="uid://by8402hq1f1eu" path="res://đồ họa/mèo/mèo/Mèo đứng trên lá 2.png" id="9_tknfa"]
+[ext_resource type="Texture2D" uid="uid://deway1k1a8tla" path="res://đồ họa/mèo/Qua phải- chéo phải/Cat right 2.png" id="10_0dlte"]
+[ext_resource type="Texture2D" uid="uid://dbx4ay2sgqg6p" path="res://đồ họa/note/Mèo đứng trên lá 1.png" id="10_f5a2d"]
+[ext_resource type="Texture2D" uid="uid://kdrpgk1np72g" path="res://đồ họa/mèo/Qua trái- chéo trái/Cat left 2_20240614125045.png" id="11_idgs7"]
+[ext_resource type="Texture2D" uid="uid://di7kyi76kir1p" path="res://đồ họa/note/Mèo đứng trên lá 2.png" id="11_wtdk1"]
+[ext_resource type="Texture2D" uid="uid://dh4fayj241huf" path="res://đồ họa/batien/Background .png" id="12_7nylp"]
+[ext_resource type="Texture2D" uid="uid://byiv5o204klgv" path="res://đồ họa/batien/Nước 1.png" id="13_xvwgk"]
+[ext_resource type="Texture2D" uid="uid://bydprkuakfch4" path="res://đồ họa/batien/Nước 2.png" id="14_4nm2i"]
+[ext_resource type="Texture2D" uid="uid://ckavuto7ikoo4" path="res://đồ họa/batien/Nước 3.png" id="15_geb8j"]
+[ext_resource type="Texture2D" uid="uid://p176feoj6u1e" path="res://đồ họa/batien/Nước 4.png" id="16_nq833"]
+[ext_resource type="Texture2D" uid="uid://cm85uai5s8iac" path="res://đồ họa/batien/Hoa sen 🪷 .(copy)png.png" id="17_7aeh2"]
+[ext_resource type="Texture2D" uid="uid://cvckr22q03dwm" path="res://đồ họa/batien/Cục đá .png" id="18_wl5ry"]
+[ext_resource type="Texture2D" uid="uid://bntivjogcvn07" path="res://đồ họa/batien/Cỏ mọc trong nước (copy).png" id="19_2i0s0"]
+[ext_resource type="AudioStream" uid="uid://bpcerken5rgk4" path="res://soundeffect/StockTune-Kart Race Mischief_1725968926.mp3" id="21_rh5ub"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tegsb"]
+radius = 24.0
+height = 84.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pi4lj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cmw1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_81asv")
+}],
+"loop": true,
+"name": &"cry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_38dx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uxiln")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gs8nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_38dx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uy32h")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_hohv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tknfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f5a2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wtdk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hohv0")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_c7qbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0dlte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_idgs7")
+}],
+"loop": true,
+"name": &"thanhcong",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_1xwq0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"new_animation"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rwgfg"]
+resource_name = "rơi "
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"right", &"cry"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.6, 1.2, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 1, 0, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(100, -100), Vector2(1000, -100)]
+}
+
+[sub_resource type="Animation" id="Animation_fu60o"]
+resource_name = "thang"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"new_animation"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 50), Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_a6hpj"]
+resource_name = "thanhcong"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.2, 3.7, 5.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [&"right", &"thanhcong", &"left", &"thanhcong"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.9, 1.6, 2.2, 2.3, 2.4, 2.8, 3.3, 3.9, 4.2, 4.4, 4.8, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 2, 0, 2, 1, 0, 1, 0, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 5.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(350, -270), Vector2(0, -350)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2a2gp"]
+_data = {
+"RESET": SubResource("Animation_1xwq0"),
+"rơi ": SubResource("Animation_rwgfg"),
+"thang": SubResource("Animation_fu60o"),
+"thanhcong": SubResource("Animation_a6hpj")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgvby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_xvwgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4nm2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_geb8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nq833")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_xvwgk")
+}],
+"loop": true,
+"name": &"gioithiu",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_vair8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"default"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.917647, 0.913725, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.07205, 0.812325)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Label:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["             |
+             |
+             |
+173,2m|
+             |
+             |
+             |"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../Label2:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CỏMọcTrongNước(copy):modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HoaSen🪷_(copy)png:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_532xm"]
+resource_name = "gioithiu"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"gioithiu"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.917647, 0.913725, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.00347, 0.743697), Vector2(1.07205, 0.812325), Vector2(1.00434, 0.757703)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Label:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["", "             |
+             |
+             |
+             |
+             |
+             |
+             |", "             |
+             |
+             |
+173,2m|
+             |
+             |
+             |"]
+}
+
+[sub_resource type="Animation" id="Animation_mwbua"]
+resource_name = "gioithiu_2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"gioithiu"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["             |
+             |
+             |
+173,2m|
+             |
+             |
+             |", "             |
+             |
+             |
+173,2m|
+             |
+             |
+             |", "             |
+             |
+             |
+173,2m|
+             |
+             |
+             |"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../Label2:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["", "_________________________
+              ", "_________________________
+              173,2m"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CỏMọcTrongNước(copy):modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.564706, 0.588235, 0.905882, 1), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HoaSen🪷_(copy)png:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.7, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.933333, 0.4, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7b3di"]
+resource_name = "nuoc"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"default"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6punt"]
+_data = {
+"RESET": SubResource("Animation_vair8"),
+"gioithiu": SubResource("Animation_532xm"),
+"gioithiu_2": SubResource("Animation_mwbua"),
+"nuoc": SubResource("Animation_7b3di")
+}
+
+[node name="pbtien" type="Node2D"]
+script = ExtResource("1_pugub")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(217, 405)
+shape = SubResource("CapsuleShape2D_tegsb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(220, 405.5)
+scale = Vector2(0.135632, 0.141379)
+sprite_frames = SubResource("SpriteFrames_pi4lj")
+animation = &"new_animation"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+root_node = NodePath("../AnimatedSprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_2a2gp")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 1155.0
+offset_bottom = 649.0
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 231.0
+offset_top = 199.0
+offset_right = 957.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 100
+text = "TAP TO START !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="chịu" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel2" type="Panel" parent="chịu"]
+offset_right = 1155.0
+offset_bottom = 649.0
+
+[node name="Label2" type="Label" parent="chịu"]
+offset_left = 198.0
+offset_top = 195.0
+offset_right = 1044.0
+offset_bottom = 415.0
+theme_override_font_sizes/font_size = 100
+text = "TAP TO RESTART !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="layer 1" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/layer 1"]
+position = Vector2(577, 293)
+texture = ExtResource("12_7nylp")
+
+[node name="layer 2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/layer 2"]
+modulate = Color(0, 0.917647, 0.913725, 1)
+position = Vector2(573.5, 302)
+scale = Vector2(1.07205, 0.812325)
+sprite_frames = SubResource("SpriteFrames_bgvby")
+
+[node name="HoaSen🪷_(copy)png" type="Sprite2D" parent="ParallaxBackground/layer 2"]
+position = Vector2(249, 49)
+scale = Vector2(0.769097, 0.788515)
+texture = ExtResource("17_7aeh2")
+
+[node name="CụcĐá" type="Sprite2D" parent="ParallaxBackground/layer 2"]
+position = Vector2(353, -30)
+scale = Vector2(0.536458, 0.505602)
+texture = ExtResource("18_wl5ry")
+
+[node name="CỏMọcTrongNước(copy)" type="Sprite2D" parent="ParallaxBackground/layer 2"]
+position = Vector2(691, 296)
+texture = ExtResource("19_2i0s0")
+
+[node name="nuoc" type="AnimationPlayer" parent="ParallaxBackground/layer 2"]
+libraries = {
+"": SubResource("AnimationLibrary_6punt")
+}
+
+[node name="Label" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 150.0
+offset_right = 291.0
+offset_bottom = 462.0
+rotation = 0.0166461
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "             |
+             |
+             |
+173,2m|
+             |
+             |
+             |"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 249.0
+offset_top = 157.0
+offset_right = 522.0
+offset_bottom = 242.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_rh5ub")
+bus = &"Music"

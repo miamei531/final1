@@ -1,0 +1,172 @@
+[gd_scene load_steps=14 format=3 uid="uid://cq6oxjve21ju3"]
+
+[ext_resource type="Script" path="res://lặtvat/inventory_gui.gd" id="1_8re7q"]
+[ext_resource type="Texture2D" uid="uid://ndefpb4w0lmk" path="res://đồ họa/nút.png" id="2_08bni"]
+[ext_resource type="PackedScene" uid="uid://elenul5y1llx" path="res://lặtvat/panel.tscn" id="2_quxkk"]
+[ext_resource type="Texture2D" uid="uid://dkq346no6rvx0" path="res://đồ họa/mèo/mèo/Cat original.png" id="4_y3f5r"]
+[ext_resource type="Texture2D" uid="uid://hdjy5rtudwsu" path="res://đồ họa/skin/concacuatui.png" id="5_n85uy"]
+[ext_resource type="Texture2D" uid="uid://71o35elq5ch1" path="res://đồ họa/skin/Mèo Tiền Sử.png" id="6_mssfv"]
+[ext_resource type="Texture2D" uid="uid://cabto1xijx0fr" path="res://đồ họa/skin/Magic Meow.png" id="7_1bt7m"]
+[ext_resource type="Texture2D" uid="uid://cfjcyb1xmq2e1" path="res://đồ họa/skin/Mèo Lụm.png" id="8_kd6k5"]
+[ext_resource type="Texture2D" uid="uid://c5xng6bjbqtdt" path="res://đồ họa/skin/Srawbemeow.png" id="9_6kkrf"]
+[ext_resource type="Texture2D" uid="uid://bw7vv8p8sfsjt" path="res://đồ họa/skin/Wanna Swim.png" id="10_k6s52"]
+[ext_resource type="Texture2D" uid="uid://ds76hsg5dnsvu" path="res://đồ họa/skin/Witchmeow.png" id="11_d6t3o"]
+[ext_resource type="Texture2D" uid="uid://co4jqgt7dfy0b" path="res://đồ họa/skin/Love Donuts.png" id="12_ysy4u"]
+[ext_resource type="Texture2D" uid="uid://bpa5ghgsojveq" path="res://đồ họa/note/khóa.png" id="13_t7yyp"]
+
+[node name="InventoryGui" type="Control"]
+custom_minimum_size = Vector2(138, 60)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -604.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+script = ExtResource("1_8re7q")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -138.0
+offset_top = -180.0
+offset_right = 723.0
+offset_bottom = 943.0
+texture = ExtResource("2_08bni")
+region_rect = Rect2(332.667, 121.59, 96.3335, 105.231)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 264.0
+offset_right = 329.0
+offset_bottom = 364.0
+scale = Vector2(4, 4)
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot"]
+position = Vector2(11.75, 16.75)
+scale = Vector2(0.026, 0.031)
+texture = ExtResource("4_y3f5r")
+
+[node name="slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot2"]
+position = Vector2(11, 17.25)
+scale = Vector2(0.027, 0.031)
+texture = ExtResource("5_n85uy")
+
+[node name="slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot3"]
+position = Vector2(11, 16.75)
+scale = Vector2(0.031, 0.031)
+texture = ExtResource("6_mssfv")
+
+[node name="slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot4"]
+position = Vector2(11.75, 17)
+scale = Vector2(0.031, 0.031)
+texture = ExtResource("7_1bt7m")
+
+[node name="slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot5"]
+position = Vector2(11.75, 17.75)
+scale = Vector2(0.031, 0.031)
+texture = ExtResource("8_kd6k5")
+
+[node name="slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot6"]
+position = Vector2(11.5, 17.5)
+scale = Vector2(0.031, 0.031)
+texture = ExtResource("9_6kkrf")
+
+[node name="slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot7"]
+position = Vector2(11.25, 17)
+scale = Vector2(0.031, 0.031)
+texture = ExtResource("10_k6s52")
+
+[node name="slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot8"]
+position = Vector2(11.5, 17.25)
+scale = Vector2(0.031, 0.031)
+texture = ExtResource("11_d6t3o")
+
+[node name="slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_quxkk")]
+layout_mode = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="NinePatchRect/GridContainer/slot9"]
+position = Vector2(10.75, 16.75)
+scale = Vector2(0.031, 0.031)
+texture = ExtResource("12_ysy4u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.847059)
+position = Vector2(276, 153.5)
+scale = Vector2(1.0625, 1.46875)
+texture = ExtResource("13_t7yyp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.827451)
+position = Vector2(397, 152)
+scale = Vector2(1.0625, 1.46875)
+texture = ExtResource("13_t7yyp")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.827451)
+position = Vector2(274, 313)
+scale = Vector2(1.0625, 1.46875)
+texture = ExtResource("13_t7yyp")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.827451)
+position = Vector2(395, 311.5)
+scale = Vector2(1.0625, 1.46875)
+texture = ExtResource("13_t7yyp")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.827451)
+position = Vector2(153, 314.5)
+scale = Vector2(1.0625, 1.46875)
+texture = ExtResource("13_t7yyp")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.827451)
+position = Vector2(277, 469)
+scale = Vector2(1.0625, 1.46875)
+texture = ExtResource("13_t7yyp")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.827451)
+position = Vector2(398, 467.5)
+scale = Vector2(1.0625, 1.46875)
+texture = ExtResource("13_t7yyp")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.827451)
+position = Vector2(156, 470.5)
+scale = Vector2(1.0625, 1.46875)
+texture = ExtResource("13_t7yyp")

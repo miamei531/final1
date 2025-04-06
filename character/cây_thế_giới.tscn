@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://odtvkxrwub14"]
+
+[ext_resource type="Texture2D" uid="uid://rmu46rxfnrxf" path="res://đồ họa/note/Cây thế giới.png" id="1_jqsh3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_besd1"]
+radius = 194.0
+height = 916.0
+
+[node name="cây thế giới" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-45, -177)
+shape = SubResource("CapsuleShape2D_besd1")
+
+[node name="CâyThếGiới" type="Sprite2D" parent="."]
+position = Vector2(-13, -337)
+texture = ExtResource("1_jqsh3")

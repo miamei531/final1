@@ -1,0 +1,56 @@
+if {cauhoicayakquy} == 0:
+	Câu 1\:Trong tam giác vuông, nếu góc A = 30°, hãy tính tỉ số sin của góc A.
+	- A. 0.866
+		sai
+		set {causaiak} += 2
+		set {matca} += 1
+	- B. 0.707
+		sai
+		set {causaiak} += 2
+		set {matca} += 1
+	- C. 0.5
+		đúng
+	set {cauhoicayakquy} = 1
+	[end_timeline]
+if {cauhoicayakquy} == 1:
+	Câu 2\:Trong tam giác vuông ABC, cạnh góc vuông AB = 6 cm, cạnh huyền AC = 10 cm. Hãy tính cos của góc B.
+	- A. 0.8
+		đúng
+	- B. 0.75
+		sai rồi\:((
+		set {causaiak} += 2
+		set {matca} += 1
+	- C. 0.5
+		sai rồi\:((
+		set {causaiak} += 2
+		set {matca} += 1
+	set {cauhoicayakquy} = 2
+	[end_timeline]
+if {cauhoicayakquy} == 2:
+	câu 3\:Nếu tam giác vuông có cạnh đối của một góc là 4 cm và cạnh kề của góc đó là 3 cm, hãy tính tan của góc đó.
+	- A. 1.25
+		sai
+		set {causaiak} += 2
+		set {matca} += 1
+	- B. 1.33
+		Đúng
+	- C. 1
+		Sai
+		set {causaiak} += 2
+		set {matca} += 1
+	set {cauhoicayakquy} = 3
+	[end_timeline]
+if {cauhoicayakquy} == 3:
+	Câu 4\:Trong một tam giác vuông, sin của góc A bằng 0.8. Hãy tính tỉ số cos của góc A.
+	- A. 0.6
+		Đúng
+	- B. 0.75
+		sai
+		set {matca} += 1
+		set {causaiak} += 1
+	- C. 0.5
+		sai
+		set {matca} += 1
+		set {causaiak} += 1
+	set {cauhoicayakquy} = 4
+	[end_timeline]

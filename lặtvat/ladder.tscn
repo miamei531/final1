@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs8rts44twhin"]
+
+[ext_resource type="Texture2D" uid="uid://dpu03i2lgeigp" path="res://đồ họa/note/thang.png" id="1_nlr45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o287s"]
+size = Vector2(89, 1861)
+
+[node name="ladder" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9.5, 111.5)
+shape = SubResource("RectangleShape2D_o287s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.5, 50.5)
+scale = Vector2(0.773437, 3.35352)
+texture = ExtResource("1_nlr45")
